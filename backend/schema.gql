@@ -1,0 +1,89 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Pokemon {
+  id: Float!
+  Nome: String!
+  PokedexNumber: Float!
+  Image: String!
+  Generation: Float!
+  EvolutionStage: Float!
+  Evolved: Float!
+  FamilyId: Float!
+  CrossGen: Float!
+  Type1: String!
+  Type2: String!
+  Weather1: String!
+  Weather2: String!
+  StatTotal: Float!
+  Atk: Float!
+  Def: Float!
+  Sta: Float!
+  Legendary: Float!
+  Aquireable: Float!
+  Spawns: Float!
+  Regional: Float!
+  Raidable: Float!
+  Hatchable: Float!
+  Skiny: Float!
+  Nest: Float!
+  New: Float!
+  NotGettable: Float!
+  FutureEvolve: Float!
+  Cp40: Float!
+  Cp39: Float!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
+
+type Query {
+  getPokemons: [Pokemon!]!
+  getPokemon(id: Float!): Pokemon
+}
+
+type Mutation {
+  createPokemon(data: PokemonInput!): Pokemon!
+  deletePokemon(data: DeletePokemonInput!): Pokemon
+}
+
+input PokemonInput {
+  Nome: String!
+  Image: String
+  PokedexNumber: Float
+  Generation: Float
+  EvolutionStage: Float
+  Evolved: Float
+  FamilyId: Float
+  CrossGen: Float
+  Type1: String
+  Type2: String
+  Weather1: String
+  Weather2: String
+  StatTotal: Float
+  Atk: Float
+  Def: Float
+  Sta: Float
+  Legendary: Float
+  Aquireable: Float
+  Spawns: Float
+  Regional: Float
+  Raidable: Float
+  Hatchable: Float
+  Skiny: Float
+  Nest: Float
+  New: Float
+  NotGettable: Float
+  FutureEvolve: Float
+  Cp40: Float
+  Cp39: Float
+}
+
+input DeletePokemonInput {
+  id: Float!
+}
